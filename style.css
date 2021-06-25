@@ -1,0 +1,25 @@
+.fl-r {
+    float: right;
+}
+
+.well {
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.grey-heading {
+    color: gray;
+}
+
+#sign {
+    display: none;
+}
+
+#signed {
+    display: block;
+}
+.greeny{
+    font-size: 16px;
+    color: green;
+}

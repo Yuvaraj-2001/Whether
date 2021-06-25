@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whether App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loading();">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <!-- <a class="navbar-brand" href="#">
+            <img src="bird.jpg" alt="logo" style="width:40px;">
+        </a> -->
+
+        <!-- Links -->
+        <div class="navbar-nav">
+            <div class="nav-item">
+                <a class="nav-link" href="#">Whether App</a>
+            </div>
+        </div>
+
+    </nav>
+    <div class="container" id="sign">
+        <div class="row">
+            <div class="col-sm-9">
+                <br>
+                <div class="well">
+                    <h1>Sign in with us,</h1>
+                    <h4 class="grey-heading">Get to know Whether condition of your current location.</h4>
+                    <br>
+                    <h5>Sign in made easy!</h5>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Name : </span>
+                        </div>
+                        <input type="text" id="name" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Mobile : </span>
+                        </div>
+                        <input type="number" id="mob" maxlength="10" class="form-control" placeholder="Enter your Mobile number">
+                    </div>
+
+                    <button class="btn btn-block btn-primary" onclick="registerLocal();">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container" id="signed">
+        <div class="row">
+            <div class="col-sm-3">
+                <h4>Signed in as:</h4>
+                <h5 id="signUser"></h5>
+            </div>
+            <div class="col-sm-9">
+                <div class="well">
+                    <h1>Current whether details</h1>
+                    <br>
+                    <br>
+                    <h3>Current Whether : <span class="greeny" id="whether"></span></h3>
+                    <h3>High : <span class="greeny" id="high"></span></h3>
+                    <h3>Low : <span class="greeny" id="low"></span></h3>
+                    <h3>Your current location : <span class="greeny" id="location"></span></h3>
+                    <h3>Current time : <span class="greeny" id="time"></span></h3>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <div id="content"></div>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+        <br>
+        <button class="btn btn-block btn-warning" onclick="update()">Check now</button>
+        <button class="btn btn-block btn-primary" onclick="getCurrent()">Check now</button>
+        
+    </div>
+    <script
+    src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=&v=weekly"
+    async
+  ></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
